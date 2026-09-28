@@ -145,6 +145,9 @@ body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--ink);line-
 .tv3-body{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:.75rem}
 .tv3-body strong{color:var(--ink)}
 .tv3-split{display:grid;grid-template-columns:2fr 1fr;gap:1.5rem;align-items:start}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;margin-bottom:.75rem}
+.tv3-img-wrap.flush{margin:0}
+.tv3-img-wrap.narrow{margin:0;width:140px;flex-shrink:0}
 .tv3-img-wrap{position:relative;overflow:hidden;border-radius:8px;margin:.5rem 0 1.25rem;background:linear-gradient(135deg,var(--bg2) 0%,var(--bg3) 100%)}
 .tv3-img-wrap img{display:block;width:100%;height:auto;max-height:220px;object-fit:cover}
 .tv3-img-wrap.placeholder{min-height:72px;border:1px dashed var(--rule);display:flex;align-items:center;justify-content:center}
@@ -288,6 +291,7 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
   .bt-tall{grid-row:auto}
   .fbgrid{grid-template-columns:1fr}
   .tv3-split{grid-template-columns:1fr;gap:1.25rem}
+  .duo{grid-template-columns:1fr}
   .tv3-split .tv3-img-wrap{order:-1}
   .tv3-row.left,.tv3-row.right{--dot-x:1.25rem;padding-left:2.75rem;padding-right:0}
   .tv3-row.left:not(.personal)::after,.tv3-row.right:not(.personal)::after{display:none}
@@ -476,7 +480,7 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
             </div>
             <div class="tv3-tags"><span class="tv3-tag">Rockwell</span><span class="tv3-tag">PLC/LAD</span><span class="tv3-tag">Python</span><span class="tv3-tag">XML</span><span class="tv3-tag">Ignition</span><span class="tv3-tag">VFD</span><span class="tv3-tag">Hardware Procurement</span><span class="tv3-tag">Commissioning</span><span class="tv3-tag">Project Management</span><span class="tv3-tag">Business Dev</span><span class="tv3-tag">Client Ownership</span></div>
           </div>
-          <div class="tv3-img-wrap" style="margin:0">
+          <div class="tv3-img-wrap flush">
             <img src="/images/Spinach.jpg" alt="Representative: industrial leafy greens processing facility" style="max-height:none">
             <span class="tv3-img-note">representative imagery*</span>
           </div>
@@ -503,7 +507,7 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
             </div>
             <div class="tv3-tags"><span class="tv3-tag">OPCUA</span><span class="tv3-tag">Aveva</span><span class="tv3-tag">IO Documentation</span><span class="tv3-tag">Maritime</span></div>
           </div>
-          <div class="tv3-img-wrap" style="margin:0">
+          <div class="tv3-img-wrap flush">
             <img src="/images/marine-ferry.jpg" alt="Representative: regional marine ferry" style="max-height:none">
           </div>
         </div>
@@ -528,7 +532,7 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
             </div>
             <div class="tv3-tags"><span class="tv3-tag">PID</span><span class="tv3-tag">LAD</span><span class="tv3-tag">P&amp;ID Reading</span><span class="tv3-tag">FT Historian</span><span class="tv3-tag">Windows Server</span><span class="tv3-tag">Gantt / Scheduling</span><span class="tv3-tag">Commissioning</span><span class="tv3-tag">Energy</span></div>
           </div>
-          <div class="tv3-img-wrap" style="margin:0">
+          <div class="tv3-img-wrap flush">
             <img src="/images/geothermal-lithium.jpeg" alt="Geothermal lithium extraction pilot plant" style="max-height:none">
           </div>
         </div>
@@ -547,7 +551,7 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
             <p class="tv3-body">Built a test environment for the pressure system that transfers a ballistic missile through a submarine's launch tube. Simulated pressure profiles, staged launch sequences, and validated the full transfer command without live ordnance. End-to-end simulation of a system that does not get a second chance.</p>
             <div class="tv3-tags"><span class="tv3-tag">Rockwell</span><span class="tv3-tag">DAQ</span><span class="tv3-tag">Defense</span><span class="tv3-tag">Simulation</span></div>
           </div>
-          <div class="tv3-img-wrap" style="margin:0"><img src="/images/Sub.png" alt="Submarine" style="max-height:none;object-fit:cover;width:100%"></div>
+          <div class="tv3-img-wrap flush"><img src="/images/Sub.png" alt="Submarine" style="max-height:none;object-fit:cover;width:100%"></div>
         </div>
       </div>
     </div>
@@ -564,7 +568,7 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
             <p class="tv3-body">Served as PM and engineering lead on a water treatment facility integration, directly managing one engineer and a complex client relationship with multiple 3rd party contractors. Owned client relationship, billing, and delivery timeline simultaneously. Technology stack: Cisco switch configuration, PLC programming, VFD parameterization, live system integration, partner management.</p>
             <div class="tv3-tags"><span class="tv3-tag">Cisco</span><span class="tv3-tag">PLC</span><span class="tv3-tag">VFD</span><span class="tv3-tag">SCADA</span><span class="tv3-tag">Networking</span><span class="tv3-tag">PM</span><span class="tv3-tag">Partner Management</span></div>
           </div>
-          <div class="tv3-img-wrap" style="margin:0">
+          <div class="tv3-img-wrap flush">
             <img src="/images/water-treatment.png" alt="Representative: water treatment and purification facility" style="max-height:none">
             <span class="tv3-img-note">representative imagery*</span>
           </div>
@@ -585,7 +589,7 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
             <p class="tv3-body">Extensively modified an existing PLC program, migrating to a new technology stack with minimal vendor support — effectively doing so without technical backup. Successfully translated the program and led the client relationship, meeting directly with their technical team on a recurring basis to identify best practices for an evolving codebase. Owned the technical handoff and client communication simultaneously.</p>
             <div class="tv3-tags"><span class="tv3-tag">PLC</span><span class="tv3-tag">Migration</span><span class="tv3-tag">Client Management</span><span class="tv3-tag">Manufacturing</span><span class="tv3-tag">Defense</span></div>
           </div>
-          <div class="tv3-img-wrap" style="margin:0">
+          <div class="tv3-img-wrap flush">
             <img src="/images/ammunition-mfg.webp" alt="Representative: industrial ammunition assembly equipment" style="max-height:none">
             <span class="tv3-img-note">representative imagery*</span>
           </div>
@@ -612,7 +616,7 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
         <div class="tl-period">2025 – In Progress <span class="tl-badge">Building</span></div>
         <div class="tv3-title">Fernware: Automatic Plant Watering System</div>
         <div class="tv3-org">Personal Project</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;margin-bottom:.75rem">
+        <div class="duo">
           <p class="tv3-body">Could've bought one. Built it anyway. Modular automatic watering system with moisture sensors. In progress.</p>
         </div>
         <div class="tv3-tags"><span class="tv3-tag">Arduino</span><span class="tv3-tag">Sensors</span><span class="tv3-tag">In Progress</span></div>
@@ -626,9 +630,9 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
         <div class="tl-period">Side project <span class="tl-badge live">Live</span></div>
         <div class="tv3-title"><a href="https://ethanrobertkelly.github.io/Kitchen-Codex" target="_blank" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)">Recipe Manager</a></div>
         <div class="tv3-org">Personal Project</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;margin-bottom:.75rem">
+        <div class="duo">
           <p class="tv3-body">A recipe management app built on Firebase to run dinner parties. Browse, filter, and scale by category and favorites. Clean cooking view for a kitchen counter across a crowded room. The tool needed to exist so I built it.</p>
-          <div class="tv3-img-wrap" style="margin:0"><img src="/images/SOURDOUGH.jpg" alt="Sourdough bread" style="max-height:160px;object-fit:cover;width:100%"></div>
+          <div class="tv3-img-wrap flush"><img src="/images/SOURDOUGH.jpg" alt="Sourdough bread" style="max-height:160px;object-fit:cover;width:100%"></div>
         </div>
         <div class="tv3-tags"><span class="tv3-tag">Firebase</span><span class="tv3-tag">Vanilla JS</span><span class="tv3-tag">SortableJS</span><span class="tv3-tag">Single-file App</span></div>
       </div>
@@ -650,9 +654,9 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
         <div class="tl-period">2023.08 – 2024.05</div>
         <div class="tv3-title">Sea++: Autonomous Trimaran for Decentralized Transportation of Goods</div>
         <div class="tv3-org">Rice University Senior Capstone · Military Research Commission</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;margin-bottom:.75rem">
+        <div class="duo">
           <p class="tv3-body">Elected by 7 peers to lead design and construction of an autonomous trimaran commissioned for decentralized transportation of goods for the Navy. Led the full arc from commission brief to water trials. Modified A* path planning, ALOS local control, dual-rudder PID, and computer vision obstacle avoidance. Built with laser-cut ribs, XPS foam, and fiberglass. Achieved autonomous navigation in 5-ft seas, 25-mph winds with 300-lb payload.</p>
-          <div class="tv3-img-wrap" style="margin:0"><img src="/images/SEA++.png" alt="Sea++ autonomous trimaran" style="object-fit:contain;width:100%;background:var(--bg2)"></div>
+          <div class="tv3-img-wrap flush"><img src="/images/SEA++.png" alt="Sea++ autonomous trimaran" style="object-fit:contain;width:100%;background:var(--bg2)"></div>
         </div>
         <div class="tv3-stats">
           <div class="tv3-stat"><strong>$3,750</strong><span>unit cost</span></div>
@@ -671,9 +675,9 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
         <div class="tl-period">2021.08 – 2024.05</div>
         <div class="tv3-title">President &amp; Manufacturing Lead, Rice Robotics</div>
         <div class="tv3-org">Rice University</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;margin-bottom:.75rem">
+        <div class="duo">
           <p class="tv3-body">Grew the club 18x from 5 to 90+ active members through organizational restructuring, new project tracks, and a recruiting strategy that made engineering projects accessible to students across majors. Led manufacturing for multiple projects. Technical lead for RoboCam, an autonomous robotic cameraman that tracks athletes across a field using GPS and IMU fusion without human input. Designed mechanical systems and managed build logistics throughout.</p>
-          <div class="tv3-img-wrap" style="margin:0"><img src="/images/RoboCam.png" alt="RoboCam autonomous robotic cameraman" style="object-fit:contain;width:100%;background:var(--bg2)"></div>
+          <div class="tv3-img-wrap flush"><img src="/images/RoboCam.png" alt="RoboCam autonomous robotic cameraman" style="object-fit:contain;width:100%;background:var(--bg2)"></div>
         </div>
         <div class="tv3-stats">
           <div class="tv3-stat"><strong>90+</strong><span>active members</span></div>
@@ -690,9 +694,9 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
         <div class="tl-period">2024.02</div>
         <div class="tv3-title">Inaugural Rice Ironman</div>
         <div class="tv3-org">Rice University · Personal</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;margin-bottom:.75rem">
+        <div class="duo">
           <p class="tv3-body">Planned and completed the first full-distance Ironman triathlon in Rice University history. GPS-measured and designed the entire course from scratch. Completed solo in senior year, mid-capstone. Deeply grateful for the support of friends and the Women's Varsity Swim coach for technique guidance along the way.</p>
-          <div class="tv3-img-wrap" style="margin:0"><img src="/images/Ironman.png" alt="Inaugural Rice Ironman" style="max-height:180px;object-fit:cover"></div>
+          <div class="tv3-img-wrap flush"><img src="/images/Ironman.png" alt="Inaugural Rice Ironman" style="max-height:180px;object-fit:cover"></div>
         </div>
         <div class="tv3-stats">
           <div class="tv3-stat"><strong>3.82 km</strong><span>swim</span></div>
@@ -713,8 +717,8 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
         <div class="tv3-org">Personal</div>
         <p class="tv3-body">Hands-on making. Design instinct. Every one different.</p>
         <div style="display:flex;gap:.5rem;margin:.5rem 0 .25rem">
-          <div class="tv3-img-wrap" style="margin:0;width:140px;flex-shrink:0"><img src="/images/SURF ART.jpg" alt="Surfboard art" style="max-height:none;object-fit:contain;width:100%"></div>
-          <div class="tv3-img-wrap" style="margin:0;width:140px;flex-shrink:0"><img src="/images/SURF ART2.jpg" alt="Surfboard art" style="max-height:none;object-fit:contain;width:100%"></div>
+          <div class="tv3-img-wrap narrow"><img src="/images/SURF ART.jpg" alt="Surfboard art" style="max-height:none;object-fit:contain;width:100%"></div>
+          <div class="tv3-img-wrap narrow"><img src="/images/SURF ART2.jpg" alt="Surfboard art" style="max-height:none;object-fit:contain;width:100%"></div>
         </div>
       </div>
     </div>
