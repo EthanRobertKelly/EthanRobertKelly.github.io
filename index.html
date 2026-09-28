@@ -4,12 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ethan Kelly — Engineering Consultant</title>
+<meta name="description" content="Ethan Kelly — systems and controls engineer. Onsite commissioning, PLC/SCADA, and full-stack industrial software across defense, energy, maritime, and manufacturing. Open to high-ownership engineering, FDSE, and strategy roles.">
+<meta name="author" content="Ethan Kelly">
+<link rel="canonical" href="https://ethanrobertkelly.github.io/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ethanrobertkelly.github.io/">
+<meta property="og:title" content="Ethan Kelly — Engineering Consultant">
+<meta property="og:description" content="Systems and controls engineer. Onsite commissioning, full-stack industrial software, and end-to-end delivery across defense, energy, maritime, and manufacturing.">
+<meta property="og:image" content="https://ethanrobertkelly.github.io/images/Headshot.jpeg">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ethan Kelly — Engineering Consultant">
+<meta name="twitter:description" content="Systems and controls engineer. Onsite commissioning, full-stack industrial software, and end-to-end delivery.">
+<meta name="twitter:image" content="https://ethanrobertkelly.github.io/images/Headshot.jpeg">
+<!-- Favicon: EK monogram -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232a5c3a'/><text x='16' y='23' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23fdfbf8' text-anchor='middle'>EK</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#f7f4ef;--bg2:#eee9e0;--bg3:#e6dfd3;
-  --ink:#1c1712;--muted:#7a7068;--faint:#c8bfb2;--rule:#ddd6cb;
+  --ink:#1c1712;--muted:#7a7068;--faint:#857b6d;--rule:#ddd6cb;
   --accent:#2a5c3a;--accent2:#3d8a5a;--accent-lt:#edf7f1;
   --white:#fdfbf8;
 }
@@ -1097,10 +1113,9 @@ window.addEventListener('scroll',()=>{
 function drawSpine(){
   var tv3=document.querySelector('.tv3')
   if(!tv3)return
-  var old=tv3.querySelector('.tv3-spine-svg')
-  if(old)old.remove()
   var dots=Array.from(tv3.querySelectorAll('.tv3-dot'))
-  if(dots.length<2)return
+  var existing=tv3.querySelector('.tv3-spine-svg')
+  if(dots.length<2){ if(existing)existing.remove(); return }
 
   function posOf(el){
     var x=el.offsetLeft,y=el.offsetTop+el.offsetHeight/2,p=el.offsetParent
@@ -1173,7 +1188,19 @@ function drawSpine(){
     return d
   }
 
-  // 6. Build SVG
+  // 6a. Fast path — if the SVG already exists, just update the four strand
+  //     geometries in place. Avoids rebuilding the container + filter every
+  //     frame during the accordion open/close animation.
+  if(existing){
+    var ep=existing.querySelectorAll('path')
+    if(ep.length===COLORS.length){
+      for(var pi=0;pi<COLORS.length;pi++) ep[pi].setAttribute('d',crPath(strandPts[pi],4))
+      return
+    }
+    existing.remove()
+  }
+
+  // 6. Build SVG (first paint)
   var ns='http://www.w3.org/2000/svg'
   var svg=document.createElementNS(ns,'svg')
   svg.classList.add('tv3-spine-svg')
@@ -1253,7 +1280,7 @@ function triggerSpineAnim(ms){_spineRafEnd=Date.now()+(ms||600);if(!_spineRafId)
   setTimeout(function(){ typeSegment(0,0) }, 500)
 })()
 
-// WORKING WITH ME — download actual docx
+// WORKING WITH ME — download PDF
 function downloadWorkingWithMe(){
   var a=document.createElement('a')
   a.href='/Downloadable Content/Ethan Kelly - Working With Me.pdf'
