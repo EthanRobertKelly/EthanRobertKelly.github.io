@@ -34,7 +34,7 @@ body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--ink);line-
 .n-login:hover{background:var(--accent);color:var(--white)}
 
 /* HERO */
-#hero{padding:calc(54px + 4rem) 4rem 5rem;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;border-bottom:1px solid var(--rule);gap:4rem}
+#hero{padding:calc(54px + 3rem) 4rem 4rem;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-start;border-bottom:1px solid var(--rule);gap:3rem}
 /* Split: typewriter left, contact card right */
 .hero-split{display:grid;grid-template-columns:1fr 360px;gap:3rem;align-items:start}
 .hero-tw{font-size:clamp(1.5rem,2.5vw,2.15rem);font-weight:400;color:var(--ink);line-height:1.6}
@@ -49,7 +49,7 @@ body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--ink);line-
 .hero-card-div{height:1px;background:var(--rule);margin-bottom:1.1rem}
 .hero-contact{display:flex;flex-direction:column;gap:.55rem;padding-bottom:1.1rem}
 .hero-clink{display:flex;align-items:baseline;gap:.6rem;text-decoration:none;color:var(--ink);transition:color .15s}
-.hero-clink-lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);flex-shrink:0;width:52px}
+.hero-clink-lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);flex-shrink:0;width:72px}
 .hero-clink-val{font-size:12px;color:var(--muted);transition:color .15s;line-height:1.4}
 .hero-clink:hover .hero-clink-val{color:var(--ink)}
 .hero-cta-group{display:flex;flex-direction:column;gap:.5rem;padding-bottom:1.1rem}
@@ -448,11 +448,11 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
     <div class="tv3-row right" id="proj-chinalake">
       <div class="tv3-dot"></div>
       <div class="tv3-card feat">
-        <div class="tl-period">Mar 2025 – Present <span class="tl-badge live">Live</span></div>
+        <div class="tl-period">2025.03 – Present <span class="tl-badge live">Live</span></div>
         <div class="tv3-title">NAWS China Lake: CDAS Modernization</div>
         <div class="tv3-org">Federal Defense · End User: NAWS China Lake · via DMC</div>
         <p class="tv3-body">One of two primary onsite engineers for a $25B weapons test facility modernization at Navy Air Weapons Station China Lake, managing a $10M programming scope on the critical path of the entire federal asset. Rocket engine static fire stands and explosives mixing facilities, backed by remote engineering team offsite. Entered in the middle of a failing FAT milestone: managed high-stakes client expectations in real time while deep-dive debugging across LabVIEW, NI hardware, Precision Filters, PLCs, and custom DAQ applications coded in Python and C. Served as onsite technical lead for 16 critical weeks — the period when CDAS was at the center of everything — overhauling a legacy codebase rated "unacceptable" to meet rigorous federal compliance standards. A FAT is the first time software, hardware, and clients all meet; we worked through it twice under pressure without knowing the system. Both FATs accepted, putting the program on the critical path and transitioning it from failure to full delivery.</p>
-        <p class="tv3-body">Returned for a further nine weeks onsite spanning the range: commissioned the <strong>Trio 300G mixer</strong> (I/O checkout, VFD and HPU startup, bipolar STO channel resolution), built and commissioned the <strong>T-Range ignition sequence</strong> — new remote I/O, valve and transmitter checkout, clearing PCS faults and safety-interlock errors to actuate every ignition block valve — and root-caused a campus-wide <strong>time-sync failure</strong> down to a physical switch misconfiguration at Skytop, restoring PTP/NTP across T-Range and Skytop. Held aggressive onsite schedules while keeping remote project work and team comms alive.</p>
+        <p class="tv3-body">Returned for a further nine weeks onsite spanning the range: commissioned the Trio 300G mixer (I/O checkout, VFD and HPU startup, bipolar STO channel resolution), built and commissioned the T-Range ignition sequence — new remote I/O, valve and transmitter checkout, clearing PCS faults and safety-interlock errors to actuate every ignition block valve — and root-caused a campus-wide time-sync failure down to a physical switch misconfiguration at Skytop, restoring PTP/NTP across T-Range and Skytop. Held aggressive onsite schedules while keeping remote project work and team comms alive.</p>
         <div class="tv3-img-wrap">
           <img src="/images/NAWS.jpeg" alt="Representative: rocket test stand at a military weapons facility">
           <span class="tv3-img-note">representative imagery*</span>
@@ -480,11 +480,12 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
         <div class="tv3-split">
           <div>
             <p class="tv3-body">Full rewrite of 6 PLC programs across a 100+ VFD system with 19,000 unnamed variables and zero documentation on a live production floor. This facility was built one piece at a time by essentially one controls engineer over 25 years, and the quality of the original work showed. Owned the client relationship end-to-end from discovery through commissioning. Built a bidirectional dictionary function and XML parser to rename all 19,000 variables in the HMI without losing any institutional knowledge. Sold additional scope after delivery, cementing DMC as an integrated partner the client now relies on for ongoing support and engineering questions well outside the original project scope.</p>
-            <p class="tv3-body">Grew the account into a multi-project partnership: led a new <strong>Yuma production line</strong> end-to-end — sales, project management, technical specification, development, and commissioning — and drove an <strong>Ignition platform upgrade</strong> from sales through completion. What began as a technical rescue became a standing relationship spanning business development, PM, and delivery.</p>
+            <p class="tv3-body">What began as a ~$50k exploratory engagement grew into a seven-figure account. Led a new Yuma production line end-to-end — sales, project management, technical specification, development, and commissioning — and drove an Ignition platform upgrade from sales through completion, actualizing a million-dollar pipeline from a single technical rescue across business development, PM, and delivery.</p>
             <div class="tv3-stats">
               <div class="tv3-stat"><strong>19k</strong><span>variables renamed</span></div>
               <div class="tv3-stat"><strong>6</strong><span>PLCs rewritten</span></div>
               <div class="tv3-stat"><strong>100%</strong><span>CSAT</span></div>
+              <div class="tv3-stat"><strong>$50k→$1M+</strong><span>account growth</span></div>
             </div>
             <div class="tv3-tags"><span class="tv3-tag">Rockwell</span><span class="tv3-tag">PLC/LAD</span><span class="tv3-tag">Python</span><span class="tv3-tag">XML</span><span class="tv3-tag">Ignition</span><span class="tv3-tag">Project Management</span><span class="tv3-tag">Business Dev</span><span class="tv3-tag">Client Ownership</span></div>
           </div>
@@ -495,12 +496,6 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
         </div>
         <div class="tv3-quote">"Ethan is a rock star. He is entrepreneurial, focused, value-driven, and brilliant. He doesn't just take an answer at face value, he uncovers and challenges assumptions. He should have been a lawyer."
           <cite>Chris Cilino, PM and Senior Engineer, Mentor at DMC</cite>
-          <span style="display:flex;gap:1.25rem;margin-top:.75rem;flex-wrap:wrap">
-            <span style="font-size:11px;color:var(--muted)">Communication <strong style="color:var(--ink)">9</strong>/10</span>
-            <span style="font-size:11px;color:var(--muted)">Collaboration <strong style="color:var(--ink)">8</strong>/10</span>
-            <span style="font-size:11px;color:var(--muted)">Task Ownership <strong style="color:var(--ink)">9</strong>/10</span>
-            <span style="font-size:11px;color:var(--muted)">Big Picture <strong style="color:var(--ink)">10</strong>/10</span>
-          </span>
         </div>
         <div class="tv3-quote">"Ethan is able to work fairly independently for his tenure and inspires confidence from both myself and the client. As a PM, it's comforting to have a team I can trust to produce good work and raise flags when needed."
           <cite>Nick Leisle, PM and Senior Engineer II</cite>
