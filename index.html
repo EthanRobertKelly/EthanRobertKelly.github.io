@@ -86,6 +86,14 @@ body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--ink);line-
 .hero-proj-body{padding:1rem 1.2rem 1.25rem;flex:1}
 .hero-proj-desc{font-size:13px;color:var(--muted);line-height:1.65}
 .hero-proj-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+/* AI agent cards — sit above project cards; pipeline strip replaces the photo */
+.hero-ai-grid{display:grid;grid-template-columns:2fr 1fr;border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-bottom:-1.75rem}
+.hero-ai-grid .hero-proj-name{color:var(--accent)}
+.hero-ai-grid .hero-proj-desc{color:var(--ink)}
+.hero-pipe{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;padding:1.4rem 1.2rem;background:#2d241a;border-bottom:1px solid var(--rule);min-height:110px;align-content:center}
+.hero-pipe span{font-size:11px;letter-spacing:.04em;color:#d4cec5;border:1px solid #4a3f33;border-radius:5px;padding:.3rem .55rem;white-space:nowrap}
+.hero-pipe span.ok{color:#9fd9b4;border-color:var(--accent2)}
+.hero-pipe i{font-style:normal;color:#7a7068;font-size:12px}
 /* Quotes — full width, 2 columns */
 .hero-quotes{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
 .hero-qcard{background:var(--white);border:1px solid var(--rule);border-radius:10px;border-left:4px solid var(--accent);padding:1.75rem 2rem}
@@ -278,7 +286,8 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
   #hero{padding:calc(54px + 2.5rem) 1.5rem 3rem;gap:2.5rem;min-height:auto}
   .hero-split{grid-template-columns:1fr;gap:2rem}
   .hero-card{border-left:none;border-top:1px solid var(--rule);padding-left:0;padding-top:1.5rem}
-  .hero-proj-grid{grid-template-columns:1fr}
+  .hero-proj-grid,.hero-ai-grid{grid-template-columns:1fr}
+  .hero-ai-grid{margin-bottom:-1.25rem}
   .hero-proj{border-right:none;border-bottom:1px solid var(--rule)}
   .hero-proj:last-child{border-bottom:none}
   .hero-quotes{grid-template-columns:1fr}
@@ -368,6 +377,31 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
       <div class="dot-row"><div class="dot"></div><span class="st">Open to new opportunities</span></div>
     </div>
   </div>
+  <!-- AI agent cards -->
+  <div class="hero-ai-grid">
+    <a href="#proj-plc-agent" class="hero-proj">
+      <div class="hero-proj-header">
+        <div class="hero-proj-name">Rockwell Code-Writing Agent</div>
+      </div>
+      <div class="hero-pipe">
+        <span>Control narrative</span><i>→</i><span>I/O + tags</span><i>→</i><span>Ladder + HMI</span><i>→</i><span class="ok">Simulated vs. spec</span><i>→</i><span>.L5X + ME display</span>
+      </div>
+      <div class="hero-proj-body">
+        <p class="hero-proj-desc">An AI agent that turns a written control narrative into importable Studio 5000 and FactoryTalk View code, and tests the ladder against the narrative before an engineer opens it.</p>
+      </div>
+    </a>
+    <a href="#proj-proposal-agent" class="hero-proj">
+      <div class="hero-proj-header">
+        <div class="hero-proj-name">Proposal-Writing Agent</div>
+      </div>
+      <div class="hero-pipe">
+        <span>Discovery notes</span><i>→</i><span>Scope + assumptions</span><i>→</i><span class="ok">Draft proposal</span>
+      </div>
+      <div class="hero-proj-body">
+        <p class="hero-proj-desc">Turns client discovery into a first-draft proposal, so engineers spend their time on the technical approach instead of the boilerplate.</p>
+      </div>
+    </a>
+  </div>
   <!-- Project cards -->
   <div class="hero-proj-grid">
     <a href="#proj-chinalake" class="hero-proj">
@@ -433,6 +467,36 @@ footer{padding:1.25rem 3rem;border-top:1px solid var(--rule);display:flex;align-
       <div>
         <div class="tv3-ch-title">Dynamic Motion Control Inc.</div>
         <div class="tv3-ch-sub">Engineering Consultant · Sep 2024 – Present · San Francisco, CA</div>
+      </div>
+    </div>
+
+    <!-- Rockwell Code-Writing Agent — LEFT, featured -->
+    <div class="tv3-row left" id="proj-plc-agent">
+      <div class="tv3-dot"></div>
+      <div class="tv3-card feat">
+        <div class="tl-period">2025 – Present <span class="tl-badge">Building</span></div>
+        <div class="tv3-title">Rockwell Code-Writing Agent</div>
+        <div class="tv3-org">Internal AI Tooling · DMC</div>
+        <p class="tv3-body">An agent that reads a control narrative and I/O list and generates an importable Studio 5000 project: controller, I/O modules, UDTs, tags, and routines, plus a FactoryTalk View ME display already bound to the PLC tags. Before handing anything over, it runs the generated ladder in its own RLL interpreter against scenarios taken straight from the narrative: timer edges, latches, resets, and setpoint clamps.</p>
+        <p class="tv3-body">It then reports what it couldn't verify (module codes, wiring polarity) and where the narrative is ambiguous, which are the questions a senior engineer would take back to the client. Engineers start from a tested baseline instead of a blank project, so their hours go to commissioning and the client rather than boilerplate.</p>
+        <div class="tv3-stats">
+          <div class="tv3-stat"><strong>22/22</strong><span>narrative checks passed</span></div>
+          <div class="tv3-stat"><strong>3</strong><span>import-ready files</span></div>
+          <div class="tv3-stat"><strong>Spec → code</strong><span>with open questions flagged</span></div>
+        </div>
+        <div class="tv3-tags"><span class="tv3-tag">AI Agents</span><span class="tv3-tag">Rockwell</span><span class="tv3-tag">Studio 5000</span><span class="tv3-tag">L5X</span><span class="tv3-tag">FactoryTalk View ME</span><span class="tv3-tag">Ladder Simulation</span><span class="tv3-tag">Python</span><span class="tv3-tag">XML</span></div>
+      </div>
+    </div>
+
+    <!-- Proposal-Writing Agent — RIGHT -->
+    <div class="tv3-row right" id="proj-proposal-agent">
+      <div class="tv3-dot"></div>
+      <div class="tv3-card">
+        <div class="tl-period">2025 – Present <span class="tl-badge">Building</span></div>
+        <div class="tv3-title">Proposal-Writing Agent</div>
+        <div class="tv3-org">Internal AI Tooling · DMC</div>
+        <p class="tv3-body">An agent that takes discovery notes and drafts a client proposal: scope, assumptions, exclusions, and deliverables, written in DMC's format. It shortens the gap between a discovery call and a proposal on the client's desk, and keeps scope language consistent from one engineer to the next.</p>
+        <div class="tv3-tags"><span class="tv3-tag">AI Agents</span><span class="tv3-tag">Proposals</span><span class="tv3-tag">Business Dev</span><span class="tv3-tag">Python</span></div>
       </div>
     </div>
 
